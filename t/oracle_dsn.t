@@ -4,11 +4,15 @@ use strict;
 use warnings;
 use utf8::all;
 use Test::Most;
-use Test::FailWarnings;
+# use Test::FailWarnings;
 
 use t::lib::TestUtils;
 
 use DBIx::ParseDSN;
+use DBIx::ParseDSN::Oracle;
+
+my $dsn = parse_dsn("dbi:Oracle:host=foobar;sid=DB;port=1521");
+isa_ok( $dsn, "DBIx::ParseDSN::Oracle" );
 
 ## dbi:Oracle:DB
 test_dsn_basics(
