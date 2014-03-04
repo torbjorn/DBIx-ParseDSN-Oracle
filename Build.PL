@@ -12,7 +12,7 @@ my $builder = Module::Build->new(
         'Test::Most' => 0,
     },
     requires => {
-
+        'DBIx::ParseDSN' => '0.9.4',
     },
     add_to_cleanup      => [ 'DBIx-ParseDSN-Oracle-*' ],
     # sign => 1,

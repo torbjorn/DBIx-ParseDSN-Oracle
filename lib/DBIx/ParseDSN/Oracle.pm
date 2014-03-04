@@ -6,6 +6,27 @@ use Carp;
 
 use version; our $VERSION = qv('0.0.1');
 
+use Moo;
+extends "DBIx::ParseDSN::Default";
+
+sub names_for_database {
+    return "sid";
+}
+
+sub names_for_host {
+    return "host";
+    ## skipping server, as that is a keyword used for POOLED
+}
+
+around parse => sub {
+
+    my ($orig, $self) = (shift, shift);
+    $self->$orig(@_);
+
+
+
+};
+
 1;
 __END__
 
