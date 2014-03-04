@@ -9,7 +9,6 @@ use Test::FailWarnings;
 use t::lib::TestUtils;
 
 use DBIx::ParseDSN;
-use DBIx::ParseDSN::Oracle;
 
 my $dsn = parse_dsn("dbi:Oracle:host=foobar;sid=DB;port=1521");
 isa_ok( $dsn, "DBIx::ParseDSN::Oracle" );
@@ -79,5 +78,8 @@ test_dsn_basics(
     undef, undef,
     "DB:POOLED"
 );
+
+## new tricky ones
+
 
 done_testing;
