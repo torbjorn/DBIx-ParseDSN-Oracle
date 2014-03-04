@@ -1,0 +1,22 @@
+---
+abstract: "[One line description of module's purpose here]"
+author:
+  - 'TorbjÃ¸rn Lindahl <torbjorn.lindahl@gmail.com>'
+build_requires:
+  Test::Most: 0
+configure_requires:
+  Module::Build: 0.42
+dynamic_config: 0
+generated_by: 'Module::Build version 0.4204, CPAN::Meta::Converter version 2.132140'
+license: artistic
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: DBIx-ParseDSN-Oracle
+provides:
+  DBIx::ParseDSN::Oracle:
+    file: lib/DBIx/ParseDSN/Oracle.pm
+    version: v0.0.1
+resources:
+  license: http://www.perlfoundation.org/artistic_license_1_0
+version: v0.0.1
